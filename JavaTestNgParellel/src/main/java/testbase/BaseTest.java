@@ -69,8 +69,9 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod
-	public void setup(Method method) {
-		ExtentTest testMethod = childTest.get().createNode(method.getName());
+	public void setup(ITestResult results) {
+		System.out.println("Hello ::  "+results.getMethod().getMethodName());
+		ExtentTest testMethod = childTest.get().createNode(results.getMethod().getMethodName());
 		childTestNew.set(testMethod);
 	}
 	
