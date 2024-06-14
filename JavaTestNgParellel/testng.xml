@@ -9,19 +9,5 @@
 		</classes>
 	</test> <!-- Test -->
 
-	<test thread-count="5" name="Regression Tests FIREFOX">
-		<parameter name="browser" value="firefox" />
-		<classes>
-			<class
-				name="mmravi.JavaTestNgParellel.TC001_Valdatecontacts" />
-		</classes>
-	</test> <!-- Test -->
 	
-	<test thread-count="5" name="Regression Tests EDGE">
-		<parameter name="browser" value="edge" />
-		<classes>
-			<class
-				name="mmravi.JavaTestNgParellel.TC001_Valdatecontacts" />
-		</classes>
-	</test> <!-- Test -->
 </suite> <!-- Suite -->
