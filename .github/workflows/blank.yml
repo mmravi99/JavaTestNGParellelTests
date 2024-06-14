@@ -18,9 +18,9 @@ jobs:
     - name: Run Docker container
       run: |
         docker run -d --name my_container -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.21.0-20240522
+    - uses: actions/checkout@v4
     - name: Run a one-line script
       run: ls -l
-    - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
