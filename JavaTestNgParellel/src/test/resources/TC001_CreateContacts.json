@@ -1,0 +1,14 @@
+[
+	{
+        "plotform": "chrome",
+        "runmode": "Y"
+    },
+    {
+        "plotform": "firefox",
+        "runmode": "N"
+    },
+    {
+        "plotform": "mobile",
+        "runmode": "N"
+    }
+]
