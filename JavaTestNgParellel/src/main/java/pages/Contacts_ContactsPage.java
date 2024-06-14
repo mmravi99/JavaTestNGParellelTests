@@ -30,9 +30,9 @@ public class Contacts_ContactsPage {
 	}
 	public void addConatacts(String fn,String ln,String cn,String mail,String phone ) throws InterruptedException {
 		clickContactsTab();
-		Thread.sleep(8000);
+		Thread.sleep(4000);
 		driver.findElement(btnAddContacts).click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		driver.findElement(txtFirsName).sendKeys(fn);
 		driver.findElement(txtLastName).sendKeys(ln);
 		driver.findElement(txtCompanyName).sendKeys(cn);
@@ -40,6 +40,7 @@ public class Contacts_ContactsPage {
 		driver.findElement(txtPhoneNo).sendKeys(phone);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",driver.findElement((By.xpath("//span[normalize-space()='Save']"))));
+		Thread.sleep(4000);
 	}
 	 public boolean getFirstNameContactsRow(String name) {
 		  List<WebElement> contacts = driver.findElements(tbRowConacts);
