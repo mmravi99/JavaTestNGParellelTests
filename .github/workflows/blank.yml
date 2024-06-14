@@ -2,7 +2,7 @@ name: Biscred Regression Suite
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   schedule:
     - cron: '45 6 * * *'
 
