@@ -15,7 +15,7 @@ public class BrowserFactory {
 			ChromeOptions opt = new ChromeOptions();
 			driver = new ChromeDriver(opt);
 		}
-		else if(browser.equals("firefox")) {
+		else if(browser.equals("firefox")) { 
 			driver = new FirefoxDriver();
 		}
 		else if(browser.equals("edge")) {
