@@ -20,9 +20,11 @@ jobs:
         docker run -d --name my_container -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.21.0-20240522
     - name: Checkout Repo
       uses: actions/checkout@v2
+      with:
+        path: JavaTestNgParellel
+        ref: main
     - name: Print
       run: |
-        cd JavaTestNgParellel
         ls -l
         type pom.xml
     - name: Build with Maven
