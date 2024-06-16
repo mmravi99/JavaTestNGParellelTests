@@ -30,6 +30,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.sun.org.apache.bcel.internal.classfile.Method;
 
+import utils.RandomValues;
+
 public class BaseTest {
 	
 	final static String workingdir = System.getProperty("user.dir");
@@ -115,7 +117,7 @@ public class BaseTest {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir") + "/Reports/screenshots/"+ dateName
+		String destination = System.getProperty("user.dir") + "/Reports/screenshots/"+ RandomValues.generateRandomPrefix(4) +"_"+dateName
 				+ ".png";
 		File finaldDestination = new File(destination);
 		FileUtils.copyFile(source, finaldDestination);

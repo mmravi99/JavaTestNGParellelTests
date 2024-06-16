@@ -1,5 +1,6 @@
 package utils;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class RandomValues {
@@ -53,6 +54,19 @@ public class RandomValues {
 
         // Combine parts to form the complete phone number
         return firstPart + "-" + secondPart + "-" + formattedThirdPart;
+    }
+    
+    public static String generateRandomPrefix(int length) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        SecureRandom secureRandom = new SecureRandom();
+        StringBuilder stringBuilder = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            int randomIndex = secureRandom.nextInt(characters.length());
+            stringBuilder.append(characters.charAt(randomIndex));
+        }
+
+        return stringBuilder.toString();
     }
 
 }

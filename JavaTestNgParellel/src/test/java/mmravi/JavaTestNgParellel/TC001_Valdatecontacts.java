@@ -18,6 +18,7 @@ import pages.Concierge_ContactsPage;
 import testbase.BaseTest;
 import testbase.BrowserFactory;
 import testbase.DriverFactory;
+import testbase.RetryAnalyzer;
 import utils.RandomValues;
 
 public class TC001_Valdatecontacts extends BaseTest{
