@@ -25,7 +25,7 @@ jobs:
         ls -l
         cd JavaTestNgParellel
         ls -l
-        type pom.xml
+        type testng.xml
     - name: Build with Maven
       run: mvn test -Preg
     - name: Archive Artifacts
