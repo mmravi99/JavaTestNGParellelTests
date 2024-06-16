@@ -21,7 +21,7 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
       with:
-        path: JavaTestNgParellel
+        path: JavaTestNgParellel/
         ref: main
     - name: Print
       run: |
