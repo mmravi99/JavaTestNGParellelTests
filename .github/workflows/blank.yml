@@ -19,8 +19,9 @@ jobs:
       run: |
         docker run -d --name my_container -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.21.0-20240522
     - name: Run a one-line script
-      run:
-        ls -l
+      uses: actions/checkout@v2
+    - name: Print
+      run: las -l
     - name: Build with Maven
       run: mvn test -Preg
     - name: Archive Artifacts
