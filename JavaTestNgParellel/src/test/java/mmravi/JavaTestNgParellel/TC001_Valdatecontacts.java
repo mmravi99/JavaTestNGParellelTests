@@ -43,19 +43,13 @@ public TC001_Valdatecontacts() throws IOException {
 		reportLog("INFO", DriverFactory.getInstance().getDriver().getCurrentUrl());
 		reportScreenshot("SignIn Page");
 		String fn = RandomValues.generateRandomName();
-		contContactsPage.addConatacts(fn, RandomValues.generateRandomName(), "Creative Synegrgies", RandomValues.generateRandomEmail(),
+		contContactsPage.addConatacts(fn, RandomValues.generateRandomName(), "Creative Synergies", RandomValues.generateRandomEmail(),
 				RandomValues.generateRandomPhoneNumber());
-		
 		reportScreenshot("New Contact "+fn+" created in CONTACTS");
 		consSignPage.navigateToHomePage(getConciergeURL());
 		consContactPage.clickContactsTab();
 		reportScreenshot("New Contact "+fn+" created in CONCEIRGE");
 		assertTrue(consContactPage.deleteContact(fn));
 		reportScreenshot("New Contact "+fn+" deleted in CONCEIRGE");
-		
-		
-		
-	
 	}
-	
 }
