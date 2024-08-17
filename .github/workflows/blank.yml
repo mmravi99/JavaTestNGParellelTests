@@ -3,8 +3,7 @@ name: Biscred Regression Suite
 on:
   push:
     branches: [ "main" ]
-  schedule:
-    - cron: '45 6 * * *'
+  
 
 jobs:
   run-SeleniumTest:
